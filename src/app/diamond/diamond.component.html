@@ -1,1 +1,18 @@
-<p>diamond works!</p>
+<div class="diamondForm">
+<div class="mt-3">
+    <input type="text"
+    placeholder="a oldal" [formControl]="aside"
+    class="form-control">
+ </div>
+<div class="mt-3" >
+    <input type="text"
+    placeholder="alfa" [formControl]="alfa"
+    class="form-control"(keyup)="onKeyup($event)"> 
+ </div>
+ <div class="mt-3"  *ngIf="perimeterVsisble">
+    <input type="text"readOnly placeholder="kerület eredmény" [formControl]="perimeter" class="form-control">
+</div>
+ <div class="mt-3" *ngIf="areaVsisble">
+    <input type="text"readOnly placeholder="terület eredmény" [formControl]="area" class="form-control">
+</div>
+</div>
